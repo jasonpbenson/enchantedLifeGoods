@@ -1,0 +1,19 @@
+/* imported fonts */
+/* font-family: 'Special Elite', cursive;
+font-family: 'Vollkorn', serif;
+font-family: 'Balthazar', serif;
+font-family: 'Cormorant Infant', serif;
+font-family: 'Mirza', cursive;
+font-family: 'UnifrakturMaguntia', cursive;
+font-family: 'Eczar', serif; */
+
+/* app-wide shared styles */
+
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}

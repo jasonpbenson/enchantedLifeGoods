@@ -1,0 +1,29 @@
+.header{
+    width: 90vw;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    margin: 0 auto;
+    background-color: #c4d2d7;
+    box-shadow: .5px .5px 1px 1px #61518f;
+}
+
+.logo{
+    width: 20vw;
+}
+
+.menuContainer ul{
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-end;
+    align-items: center;
+    font-family: 'Balthazar', serif;
+    font-size: 24px;
+    margin: 0 auto;
+}
+
+.menuContainer li{
+    margin: 2rem;
+}

@@ -1,0 +1,19 @@
+.homeContainer{
+    position: relative;
+    height: 70vh;
+}
+
+#curve{
+    fill: transparent;
+}
+
+text{
+    font-size: 13.8px;
+}
+
+/* .circle{
+    position: absolute;
+    z-index: 10;
+    left: 540px;
+    top: 130px;
+} */
