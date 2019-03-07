@@ -1,0 +1,17 @@
+.footerContainer{
+    width: 90vw;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.footerContainer h2{
+    font-family: 'Balthazar', serif;
+    font-size: 30px;
+}
+
+.footerContainer h2:hover{
+    color: #5fb4ba;
+}

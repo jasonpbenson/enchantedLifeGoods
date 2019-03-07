@@ -1,6 +1,6 @@
 .homeContainer{
     position: relative;
-    height: 70vh;
+    height: 55vh;
 }
 
 #curve{
@@ -8,12 +8,28 @@
 }
 
 text{
-    font-size: 13.8px;
+    font-size: 12.9px;
+    font-family: 'Eczar', serif;
 }
 
-/* .circle{
-    position: absolute;
-    z-index: 10;
-    left: 540px;
-    top: 130px;
-} */
+.pupil{
+    opacity: .8;
+}
+
+.spot {
+    animation: spot 2s linear infinite;
+
+}
+        
+@keyframes spot{
+    from {
+        background: white;
+        opacity: 1;
+    }
+    to {
+        background: #e67639;
+        transform: scale(2,2);
+        transform: translate(0);
+        opacity: 0;
+    }
+}

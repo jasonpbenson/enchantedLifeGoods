@@ -4,14 +4,35 @@
     align-content: center;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 2rem;
+    padding: 1rem 1rem;
     margin: 0 auto;
-    background-color: #c4d2d7;
-    box-shadow: .5px .5px 1px 1px #61518f;
+    margin-top: 1rem;
+    background-color: rgba(95,180,186,.15);
+    box-shadow: .5px .5px 4px 2px rgba(125,122,255,.5);
+}
+
+.logoContainer{
+    width: 30vw;
+}
+
+.logoContainer:hover{
+    background-image: url(../../srcAssets/enchanted_splatter_OffRegTrace_orangeGlow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .logo{
-    width: 20vw;
+    width: 60%;
+}
+
+.menuContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menuIcon{
+    width: 4vw;
 }
 
 .menuContainer ul{
@@ -25,5 +46,24 @@
 }
 
 .menuContainer li{
-    margin: 2rem;
+    margin: 0 8px 0 8px;
+    border-radius: 5px;
+}
+
+.link:hover{
+    color: #e67639;
+}
+
+.pageHeader{
+    width: 90vw;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.pageHeader h1{
+    font-family: 'UnifrakturMaguntia', cursive;
+    margin-bottom: 0;
+    margin-left: 3vw;
 }

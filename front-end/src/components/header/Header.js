@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Logo from './Logo';
 import Menu from './Menu';
 import './header.css';
-import '../../index.css';
+import '../../App.css';
 
 function Header(props){
     return(
