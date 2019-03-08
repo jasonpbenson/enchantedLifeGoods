@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "../App.css";
-import './pages.css';
+import './goods.css';
+import ThumbsUsables from './ThumbsUsables';
+import ThumbsWearables from './ThumbsWearables';
 
 class Goods extends Component{
     constructor(){
@@ -12,23 +14,10 @@ class Goods extends Component{
             <div className="goodsContainer">
                 <div className="thumbMenu">
                     <div className="thumbMenuHeader">
-                        <h2>usables | wearables</h2>
+                        <button className="menuButton">usables</button>
+                        <button className="menuButton">wearables</button>
                     </div>
-                    <div className="thumbContainer">
-                        <div className="item"><img src="/assets/graphics/sampleimg.png"/></div>
-                        <div className="item"><img src="/assets/graphics/sampleimg.png"/></div>
-                        <div className="item"><img src="/assets/graphics/sampleimg.png"/></div>
-                        <div className="item"><img src="/assets/graphics/sampleimg.png"/></div>
-                        <div className="item"><img src="/assets/graphics/sampleimg.png"/></div>
-                        <div className="item"><img src="/assets/graphics/sampleimg.png"/></div>
-                    </div>
-                </div>
-                <div className="productDetails">
-                    <div className="closeButton"></div>
-                    <div className="productTitle"><h2>diablo mug</h2></div>
-                    <div className="productImage"><img src="/assets/graphics/sampleimg.png"/></div>
-                    <div className="productDescription"></div>
-                    <div className="addButton"></div>
+                    <ThumbsUsables />
                 </div>
             </div>
         )

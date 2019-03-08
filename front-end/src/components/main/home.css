@@ -1,6 +1,7 @@
 .homeContainer{
     position: relative;
-    height: 55vh;
+    height: 65vh;
+    margin: 2rem auto 0 auto;
 }
 
 #curve{
@@ -17,7 +18,7 @@ text{
 }
 
 .spot {
-    animation: spot 2s linear infinite;
+    animation: spot 3s linear infinite;
 
 }
         

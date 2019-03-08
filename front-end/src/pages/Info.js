@@ -1,9 +1,10 @@
 import React from 'react';
+import './info.css';
 
 function Info(props){
     return(
         <div className="infoContainer">
-            <img className="infoPic" src="/assets/graphics/icon1.png" />
+            <img className="infoIcon" src="/assets/graphics/icon1.png" />
         </div>
     )
 }

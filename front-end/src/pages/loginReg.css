@@ -1,0 +1,83 @@
+.formContainer{
+    height: 65vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    margin: 2rem auto 0 auto;
+}
+
+.userForm{
+    width: 80%;
+    height: auto;
+    font-size: 16px;
+    color: #61518f;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label,
+form input {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+}
+
+form label{
+    margin: 1rem;
+    font-family: 'Balthazar', serif;
+}
+
+form input { 
+    font-size: 14px;
+    font-family: 'Special Elite', cursive;  
+    padding: 6px;
+    background-color: #e67639;
+}
+
+#forgot{
+    font-family: 'Balthazar', serif;
+    margin: 0 auto;
+    margin-top: 1rem;
+    color: black;
+}
+
+#forgot:hover{
+    color: white;
+}
+
+.loginButton,
+.registerButton{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #7d7aff;
+    color: white;
+    font-family: 'Balthazar', serif;
+    font-size: 18px;
+    outline: none;
+}
+
+.loginButton:hover,
+.registerButton:hover{
+    filter: invert(1);
+}
+
+/* .registerButton{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #7d7aff;
+    color: white;
+    font-family: 'Balthazar', serif;
+    font-size: 18px;
+}
+
+.registerButton:hover{
+    filter: invert(1);
+} */

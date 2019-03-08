@@ -1,0 +1,38 @@
+.productDetails{
+    width: 60%;
+    height: 100%;
+    outline: 1px solid #7d7aff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 1rem;
+}
+
+.closeButton{
+
+}
+
+.productTitle{
+
+}
+
+.productImage{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.productImage img{
+    width: 100%;
+}
+
+.productDescription{
+
+}
+
+.addButton{
+
+}

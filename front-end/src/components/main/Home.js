@@ -14,7 +14,7 @@ function Home(props){
                 </text>    
                 <Link to="/goods"><circle className="iris" cx="350" cy="112" r="70" fill="#5fb4ba"/></Link>
                 <Link to="/goods"><circle className="pupil" cx="350" cy="112" r="30" fill="black"/></Link>
-                <Link to="/goods"><circle className="spot" cx="368" cy="112" r="10" fill="white"/></Link>
+                <Link to="/goods"><circle className="spot" cx="350" cy="112" r="5" fill="white"/></Link>
                 <path id="curve" d="M 177 135 q 175 120 350 0" stroke="black" strokeWidth="2px"/>
             </svg>
         </div>

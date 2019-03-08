@@ -1,0 +1,86 @@
+.goodsContainer{
+    height: 65vh;
+    width: 90%;
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2rem auto 0 auto;
+}
+
+.thumbMenu{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+}
+
+.thumbMenuHeader{
+    height: 90%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.menuButton{
+    width: 100px;
+    height: 30px;
+    background-color: #7d7aff;
+    color: white;
+    font-family: 'Balthazar', serif;
+    font-size: 18px;
+    margin: 0 1rem 1rem 1rem;
+    outline: none;
+}
+
+.menuButton:hover{
+    filter: invert(1);
+}
+
+.thumbContainer{
+    height: 90%;
+    width: fit-content;
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.thumbContainer::-webkit-scrollbar{
+    width: .2em;
+    outline: none;
+    background: none;
+}
+
+.thumbContainer::-webkit-scrollbar-thumb{
+    background-color: #7d7aff;
+    outline: none;
+    margin: .2em;
+}
+
+.thumbContainer::-webkit-scrollbar-corner{
+    display: none;
+}
+
+
+.item{
+    width: 20%;
+    margin: 0 10px 10px 10px;
+}
+
+.item img{
+    width: 100%;
+}

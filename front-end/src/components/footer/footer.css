@@ -1,5 +1,6 @@
 .footerContainer{
     width: 90vw;
+    height: 10vh;
     display: flex;
     justify-items: center;
     justify-content: space-between;
@@ -13,5 +14,5 @@
 }
 
 .footerContainer h2:hover{
-    color: #5fb4ba;
+    color: #ffffff;
 }

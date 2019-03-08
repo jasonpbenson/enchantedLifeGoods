@@ -1,0 +1,16 @@
+.infoContainer{
+    height: 65vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    margin: 2rem auto 0 auto;
+}
+
+.infoIcon{
+    width: 15%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}

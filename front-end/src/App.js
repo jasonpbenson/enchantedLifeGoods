@@ -4,13 +4,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // components
 import Header from './components/header/Header';
-import PageHeader from './components/header/PageHeader';
 import Footer from './components/footer/Footer';
 import Home from './components/main/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Goods from './pages/Goods';
 import Info from './pages/Info';
+import Account from './pages/Account';
 
 class App extends Component {
   render() {
@@ -19,13 +19,13 @@ class App extends Component {
       <Router>
         <div className="App">
           <Header />
-          <PageHeader />
           <div className="contentWrapper">
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/goods" component={Goods} />
             <Route exact path="/info" component={Info} />
+            <Route exact path="/account" component={Account} />
           </div>
           <Footer />
         </div>
