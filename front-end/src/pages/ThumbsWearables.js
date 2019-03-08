@@ -1,5 +1,6 @@
 import React from 'react';
 import './goods.css';
+import "../App.css";
 
 function ThumbsWearables(props){
     return(

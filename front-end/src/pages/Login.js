@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import "../App.css";
 import './loginReg.css';
+import "../App.css";
 
 class Login extends Component{
     constructor(){

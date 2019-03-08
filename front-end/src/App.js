@@ -11,6 +11,9 @@ import Register from './pages/Register';
 import Goods from './pages/Goods';
 import Info from './pages/Info';
 import Account from './pages/Account';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import Admin from './pages/Admin';
 
 class App extends Component {
   render() {
@@ -26,6 +29,9 @@ class App extends Component {
             <Route exact path="/goods" component={Goods} />
             <Route exact path="/info" component={Info} />
             <Route exact path="/account" component={Account} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/checkout" component={Checkout} />
+            <Route exact path="/admin" component={Admin} />
           </div>
           <Footer />
         </div>

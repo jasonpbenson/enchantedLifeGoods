@@ -1,4 +1,4 @@
-.goodsContainer{
+.cartContainer{
     height: 65vh;
     width: 90%;
     display: flex;
@@ -11,28 +11,15 @@
     margin: 2rem auto 0 auto;
 }
 
-.thumbMenu{
-    width: 90%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-items: flex-start;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-around;
-}
-
-.thumbMenuHeader{
+.buttonContainer{
     height: 90%;
     width: fit-content;
     display: flex;
     flex-direction: column;
-    justify-items: center;
     justify-content: center;
 }
 
-.menuButton{
+.checkoutButton{
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -44,14 +31,14 @@
     outline: none;
 }
 
-.menuButton:hover{
+.checkoutButton:hover{  
     filter: invert(1);
     cursor: pointer;
 }
 
-.thumbContainer{
-    height: 100%;
-    width: fit-content;
+.cartContents{
+    height: 90%;
+    width: 70%;
     overflow: scroll;
     display: flex;
     flex-direction: row;
@@ -59,30 +46,5 @@
     align-content: flex-start;
     align-items: flex-start;
     justify-content: flex-start;
-}
-
-.thumbContainer::-webkit-scrollbar{
-    width: .2em;
-    outline: none;
-    background: none;
-}
-
-.thumbContainer::-webkit-scrollbar-thumb{
-    background-color: #7d7aff;
-    outline: none;
-    margin: .2em;
-}
-
-.thumbContainer::-webkit-scrollbar-corner{
-    display: none;
-}
-
-
-.item{
-    width: 20%;
-    margin: 0 10px 10px 10px;
-}
-
-.item img{
-    width: 100%;
+    outline: 1px solid #7d7aff;
 }

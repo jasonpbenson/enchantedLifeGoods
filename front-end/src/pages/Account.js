@@ -1,5 +1,6 @@
 import React from 'react';
 import './account.css';
+import "../App.css";
 
 function Account(props){
     return(

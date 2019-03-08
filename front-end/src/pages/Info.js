@@ -1,5 +1,6 @@
 import React from 'react';
 import './info.css';
+import "../App.css";
 
 function Info(props){
     return(
