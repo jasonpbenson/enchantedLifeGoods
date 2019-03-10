@@ -68,17 +68,3 @@ form input {
     filter: invert(1);
     cursor: pointer;
 }
-
-/* .registerButton{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #7d7aff;
-    color: white;
-    font-family: 'Balthazar', serif;
-    font-size: 18px;
-}
-
-.registerButton:hover{
-    filter: invert(1);
-} */

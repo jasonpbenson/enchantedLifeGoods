@@ -9,4 +9,56 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: 2rem auto 0 auto;
+    overflow: scroll;
+}
+
+.adminContainer::-webkit-scrollbar{
+    width: .2em;
+    outline: none;
+    background: none;
+}
+
+.adminContainer::-webkit-scrollbar-thumb{
+    background-color: #7d7aff;
+    outline: none;
+    margin: .2em;
+}
+
+.adminContainer::-webkit-scrollbar-corner{
+    display: none;
+}
+
+.adminForm{
+    width: 80%;
+    height: auto;
+    font-size: 16px;
+    color: #61518f;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input { 
+    font-size: 14px;
+    font-family: 'Special Elite', cursive;  
+    padding: 6px;
+    background-color: #e67639;
+}
+
+.submitButton{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #7d7aff;
+    color: white;
+    font-family: 'Balthazar', serif;
+    font-size: 20px;
+    outline: none;
+    margin: 1rem auto;
+}
+
+.submitButton:hover{
+    filter: invert(1);
+    cursor: pointer;
 }
