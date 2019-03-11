@@ -16,7 +16,7 @@ class Goods extends Component{
             <div className="goodsContainer">
                 <div className="thumbMenu">
                     <div className="thumbMenuHeader">
-                        <button className="menuButton">usables</button>
+                        <button className="menuButton">ceramics</button>
                         <button className="menuButton">wearables</button>
                     </div>
                     <ProductOverview />

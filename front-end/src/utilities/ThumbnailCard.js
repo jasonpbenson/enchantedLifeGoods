@@ -2,15 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 function ThumbnailCard(props){
-    const image = props.data.image1;
+    console.log(props)
+
     return(
-        <div className="thumbnailCard">
-            <Link to={`/goods/${props.data.id}`}>
-                <div className="card">
-                    <img src={image} />
-                </div>
-            </Link>
-        </div>
+        <Link to={`/goods/${props.data.id}`}>
+            <div className="card">
+                <img className="item" src={`${window.apiHost}/images/db_images/${props.data.image1}`} />
+            </div>
+        </Link>
     )
 }
 
