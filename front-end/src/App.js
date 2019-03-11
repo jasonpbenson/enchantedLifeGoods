@@ -13,7 +13,7 @@ import Info from './pages/Info';
 import Account from './pages/Account';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
-import Admin from './pages/Admin';
+import Admin from './pages/admin/Admin';
 
 class App extends Component {
   render() {

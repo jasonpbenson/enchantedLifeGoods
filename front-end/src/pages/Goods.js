@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import "../App.css";
 import './goods.css';
-import ThumbsUsables from './ThumbsUsables';
-import ThumbsWearables from './ThumbsWearables';
+import ProductOverview from './ProductOverview';
+import ProductDetails from './ProductDetails';
 
 class Goods extends Component{
     constructor(){
         super();
-    }
+        // this.state = {
+        //     product: {}
+        }
     
     render(){
         return(
@@ -17,7 +19,7 @@ class Goods extends Component{
                         <button className="menuButton">usables</button>
                         <button className="menuButton">wearables</button>
                     </div>
-                    <ThumbsUsables />
+                    <ProductOverview />
                 </div>
             </div>
         )

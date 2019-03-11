@@ -1,4 +1,4 @@
-.adminContainer{
+.adminFormContainer{
     height: 65vh;
     width: 90%;
     display: flex;
@@ -12,19 +12,19 @@
     overflow: scroll;
 }
 
-.adminContainer::-webkit-scrollbar{
+.adminFormContainer::-webkit-scrollbar{
     width: .2em;
     outline: none;
     background: none;
 }
 
-.adminContainer::-webkit-scrollbar-thumb{
+.adminFormContainer::-webkit-scrollbar-thumb{
     background-color: #7d7aff;
     outline: none;
     margin: .2em;
 }
 
-.adminContainer::-webkit-scrollbar-corner{
+.adminFormContainer::-webkit-scrollbar-corner{
     display: none;
 }
 
@@ -39,11 +39,15 @@
     align-items: center;
 }
 
-form input { 
+.formBodyItem{ 
     font-size: 14px;
     font-family: 'Special Elite', cursive;  
     padding: 6px;
     background-color: #e67639;
+}
+
+.formFileItem{
+    background-color: none;
 }
 
 .submitButton{
