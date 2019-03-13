@@ -15,6 +15,8 @@ router.post('/getCart', (req, res)=> {
             const getCartTotals = `SELECT * FROM cart
                 INNER JOIN goods on goods.id = cart.gid
                 WHERE uid = $1`;
+            // const getCartContent = `SELECT * FROM goods
+            //     WHERE goods.id = cart.gid`
             db.query(getCartTotals, [uid]).then((results)=> {
                 const totals = `SELECT SUM(price) as totalPrice, 
                     count(price) as totalItems
@@ -63,6 +65,27 @@ router.post('/updateCart', (req, res)=> {
         }
     }).catch((error)=> {
         if(error){throw error};
+    })
+})
+
+router.post("/updateAddress", (req, res)=> {
+    const checkAddressQuery = `SELECT address1 FROM users WHERE token = $1`
+    db.query(checkAddressQuery, [req.body.token]).then((results)=> {
+        if(results.length === 0){
+            res.json({msg: "login"});
+        }else{
+            const updateAddressQuery = `UPDATE users SET address1=$1, address2=$2, city=$3, state=$4, zip=$5 WHERE token = $6`
+            db.query(updateAddressQuery, [req.body.address1, req.body.address2, req.body.city, req.body.state, req.body.zip, req.body.token]).then(()=> {
+            res.json({msg: "addressUpdated"});
+        })        }
+    })
+})
+
+router.post("/getAddress", (req, res)=> {
+    const getAddressQuery = `SELECT address1, address2, city, state, zip FROM users WHERE token = $1`
+    console.log(req.body.token)
+    db.query(getAddressQuery, [req.body.token]).then((results)=> {
+        res.json(results)
     })
 })
 

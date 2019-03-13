@@ -1,3 +1,4 @@
+/* 'empty cart' route=================================== */
 .emptyCart{
     height: 65vh;
     width: 90%;
@@ -29,6 +30,8 @@
     filter: invert(1);
 }
 
+/* cart================================================= */
+
 .cartContainer{
     height: 65vh;
     width: 90%;
@@ -40,6 +43,27 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: 2rem auto 0 auto;
+    overflow: hidden;
+}
+
+.cartItemContainer{
+    height: 70%;
+    width: 30%;
+    overflow: scroll;
+    position: relative;
+    outline: 1px solid #7d7aff;
+    padding: 1rem;
+    overflow: scroll
+}
+
+.cartItemContainer img{
+    width: 80%;
+}
+
+.checkoutContainer{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
 }
 
 .checkoutButton{
@@ -48,9 +72,9 @@
     border-radius: 50%;
     background-color: #7d7aff;
     color: white;
+    text-align: center;
     font-family: 'Balthazar', serif;
     font-size: 20px;
-    margin: 0 1rem 1rem 1rem;
     outline: none;
 }
 
@@ -59,15 +83,38 @@
     cursor: pointer;
 }
 
-.cartTable{
-    height: 90%;
-    width: 70%;
-    overflow: scroll;
+/* 'update address'====================================== */
+
+.updateAddresswrapper{
+    height: 65vh;
+    width: 50%;
     display: flex;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: flex-start;
-    justify-content: flex-start;
-    outline: 1px solid #7d7aff;
+    font-family: 'Balthazar', serif;
+}
+
+.addressFormContainer{
+    height: 100%;
+    width: 60%;
+}
+
+/* 'confirm order'========================================================================================== */
+
+.confirmOrderWrapper{
+    height: 65vh;
+    width: 90%;
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2rem auto 0 auto;
+    font-family: 'Balthazar', serif;
 }

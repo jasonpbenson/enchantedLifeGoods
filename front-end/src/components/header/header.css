@@ -56,11 +56,20 @@
 }
 
 .menuIcon{
-    width: 4vw;
+    width: 14vw;
+    margin-right: 1rem;
 }
 
 .menuItems{
     display: none; 
+}
+
+.mobileMenuContainer{
+    position: relative;
+}
+
+.mobileMenuItems{
+    position: absolute;
 }
 
 .pageHeader{
@@ -78,7 +87,7 @@
 }
 
 @media screen and (min-width: 1024px){
-    .menuContainer ul{
+    .menuItems{
         width: 30vw;
         display: flex;
         flex-direction: row;

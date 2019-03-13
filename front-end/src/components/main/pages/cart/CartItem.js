@@ -1,16 +1,20 @@
 import React from 'react';
+import './cart.css';
 
 function CartItem(props){
     const good = props.good;
     console.log(props)
     return(
-        <div className="cartItem">
+        <table className="cartTable">
             <tr>
-                <td>{good.goodName}</td>
-                <td>{good.buyPrice}</td>
-                <td><button className="removeButton">remove</button></td>
+            <td><img className="item" src={`${window.apiHost}/images/db_images/${good.image1}`} /></td>
+            <td>
+                {good.title}
+                ${good.price}usd
+            </td>
+            <td><button className="removeButton">x</button></td>
             </tr>
-        </div>
+        </table>
     )
 }
 

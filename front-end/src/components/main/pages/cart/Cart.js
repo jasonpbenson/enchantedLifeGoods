@@ -6,6 +6,7 @@ import getCart from '../../../../actions/getCart';
 import CartItem from './CartItem';
 import './cart.css';
 import "../../../../App.css";
+import UpdateAddress from './UpdateAddress';
 
 class Cart extends Component{
     constructor(props){
@@ -16,13 +17,14 @@ class Cart extends Component{
         if(this.props.auth.token === undefined){
             this.props.history.push('/login')
         }else{
-            console.log(this.props.getCart)
+            // console.log(this.props.getCart)
             this.props.getCart(this.props.auth.token);
         }
     }
 
     render(){
-        if(!this.props.cart.totalItems){
+        console.log(this.props.cart.total);
+        if(!this.props.cart.contents){
             return(
                 <div className="emptyCart">
                     <h3>cart empty</h3>
@@ -31,33 +33,24 @@ class Cart extends Component{
                 </div>
             )
         }else{
-            var cartArray = this.props.cart.good.map((good, index)=> {
+            var cartArray = this.props.cart.contents.map((good, index)=> {
                 return(
                     <CartItem key={index} good={good} />                
                 )
-                console.log(this.props.cart.good)
             })
-        }
-        return(
-            <div className="cartContainer">
-                <table className="cartTable">
-                    <thead>
-                        <tr>
-                            <th>GOOD</th>
-                            <th>PRICE</th>
-                            <th>REMOVE</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            return(
+                <div className="cartContainer">
+                    <UpdateAddress />
+                    <div className="cartItemContainer">
                         {cartArray}
-                    </tbody>
-                </table>
-                <h3>cart total: ${this.props.cart.totalPrice}</h3>
-                <div className="checkoutButton">
-                    <button>checkout</button>
+                    </div>
+                    <h3>cart total: ${this.props.cart.totalPrice}</h3>
+                    <div>
+                        <button className="checkoutButton"><Link to="/ConfirmOrder">checkout</Link></button>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
     }
 }
 

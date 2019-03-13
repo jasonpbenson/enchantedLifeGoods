@@ -8,8 +8,8 @@ import "../../../../App.css";
 import './goods.css';
 
 class ProductDetails extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             good: {}
         }

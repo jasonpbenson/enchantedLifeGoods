@@ -13,6 +13,7 @@ import ProductDetails from './components/main/pages/goods/ProductDetails';
 import Info from './components/main/pages/info/Info';
 import Account from './components/main/pages/account/Account';
 import Cart from './components/main/pages/cart/Cart';
+import UpdateAddress from './components/main/pages/cart/UpdateAddress';
 import ConfirmOrder from './components/main/pages/cart/ConfirmOrder';
 import Admin from './components/main/pages/admin/Admin';
 
@@ -32,6 +33,7 @@ class App extends Component {
             <Route exact path="/info" component={Info} />
             <Route exact path="/account" component={Account} />
             <Route exact path="/cart" component={Cart} />
+            <Route exact path="/updateAddress" component={UpdateAddress} />
             <Route exact path="/confirmOrder" component={ConfirmOrder} />
             <Route exact path="/admin" component={Admin} />
           </div>
