@@ -19,7 +19,7 @@ router.post('/getCart', (req, res)=> {
                 const totals = `SELECT SUM(price) as totalPrice, 
                     count(price) as totalItems
                     FROM cart
-                    INNER JOIN goods on good.id = cart.gid
+                    INNER JOIN goods on goods.id = cart.gid
                     WHERE uid = $1`;
                 db.query(totals, [uid]).then((totalNumbers)=> {
                     const responseData = {
@@ -29,7 +29,7 @@ router.post('/getCart', (req, res)=> {
                     }
                     res.json(responseData);
                 })
-            })
+            }).catch((err)=>{throw err})
         }
     }).catch((error)=> {
         if(error){throw error};
@@ -47,9 +47,9 @@ router.post('/updateCart', (req, res)=> {
         }else{
             const uid = results[0].id;
             const itemId = req.body.itemId;
-            const addToCartQuery = `INSERT INTO cart (uid, gid, date)
+            const addToCartQuery = `INSERT INTO cart (id, uid, gid, date)
                 VALUES
-                ($1, $2, NOW())`
+                (DEFAULT, $1, $2, NOW())`
             db.query(addToCartQuery, [uid, itemId]).then(()=> {
                 const getCartTotals = `SELECT * FROM cart WHERE uid = $1`
                 db.query(getCartTotals, [uid]).then((results)=> {

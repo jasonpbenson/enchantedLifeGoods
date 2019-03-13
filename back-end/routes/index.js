@@ -13,7 +13,8 @@ router.post('/register', (req, res)=> {
       const insertUserQuery = `INSERT INTO users (name, email, password, token) VALUES ($1, $2, $3, $4);`;
       const token = randToken.uid(50);
       const hash = bcrypt.hashSync(req.body.password);
-      db.query(insertUserQuery, [req.body.name, req.body.email, token, hash,]).then(()=> {
+      console.log(hash)
+      db.query(insertUserQuery, [req.body.name, req.body.email, hash, token,]).then(()=> {
         res.json({
           msg: "userAdded",
           token,

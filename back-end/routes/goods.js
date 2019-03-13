@@ -3,7 +3,7 @@ var router = express.Router();
 const db = require('../database');
 
 router.get('/', (req, res)=> {
-    const productQuery = `SELECT * FROM goods WHERE ceramic = true`
+    const productQuery = `SELECT * FROM goods WHERE ceramic = true AND available = true`
     db.query(productQuery).then((results)=> {
         res.json(results);
         console.log(results);

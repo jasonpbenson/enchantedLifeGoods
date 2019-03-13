@@ -6,15 +6,15 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './components/main/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Goods from './pages/Goods';
-import ProductDetails from './pages/ProductDetails';
-import Info from './pages/Info';
-import Account from './pages/Account';
-import Cart from './pages/Cart';
-import Checkout from './pages/Checkout';
-import Admin from './pages/admin/Admin';
+import Login from './components/main/pages/loginReg/Login';
+import Register from './components/main/pages/loginReg/Register';
+import Goods from './components/main/pages/goods/Goods';
+import ProductDetails from './components/main/pages/goods/ProductDetails';
+import Info from './components/main/pages/info/Info';
+import Account from './components/main/pages/account/Account';
+import Cart from './components/main/pages/cart/Cart';
+import ConfirmOrder from './components/main/pages/cart/ConfirmOrder';
+import Admin from './components/main/pages/admin/Admin';
 
 class App extends Component {
   render() {
@@ -32,7 +32,7 @@ class App extends Component {
             <Route exact path="/info" component={Info} />
             <Route exact path="/account" component={Account} />
             <Route exact path="/cart" component={Cart} />
-            <Route exact path="/checkout" component={Checkout} />
+            <Route exact path="/confirmOrder" component={ConfirmOrder} />
             <Route exact path="/admin" component={Admin} />
           </div>
           <Footer />

@@ -1,0 +1,166 @@
+.goodsContainer{
+    height: 65vh;
+    width: 90%;
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2rem auto 0 auto;
+}
+
+.thumbMenu{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+}
+
+.thumbMenuHeader{
+    height: 90%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+}
+
+.menuButton{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #7d7aff;
+    color: white;
+    font-family: 'Balthazar', serif;
+    font-size: 20px;
+    margin: 0 2rem 1rem 2rem;
+    outline: none;
+}
+
+.menuButton:hover{
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.thumbContainer{
+    height: 65vh;
+    width: 85%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.thumbContainer::-webkit-scrollbar{
+    width: .2em;
+    outline: none;
+    background: none;
+}
+
+.thumbContainer::-webkit-scrollbar-thumb{
+    background-color: #7d7aff;
+    outline: none;
+    margin: .2em;
+}
+
+.thumbContainer::-webkit-scrollbar-corner{
+    display: none;
+}
+
+.card{
+    display: inline;
+}
+
+a{
+    width: 200px;
+    margin: 1rem;
+}
+
+.item{
+    width: 100%;
+    margin: 0 10px 10px 10px;
+}
+
+.item:hover{
+    box-shadow: .5px .5px 4px 2px rgba(125,122,255,.5);
+    cursor: pointer;
+}
+
+.item img{
+    width: 100%;
+}
+
+.productContainer{
+    height: 65vh;
+    width: 90%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2rem auto 0 auto;
+    overflow: hidden;
+}
+
+.imageContainer{
+    width: 40%;
+    position: relative;
+}
+
+.imageContainer img{
+    width: 100%;
+}
+
+.infoContainer{
+    width: 40%;
+}
+
+.productTitle{
+    font-family: 'UnifrakturMaguntia', cursive;
+    width: 80%;
+    height: 75px;
+    text-align: center;
+    margin: 0;
+}
+
+.productTitle:hover{
+    font-family: 'Balthazar', serif;
+}
+
+.descriptionContainer p{
+    font-family: 'Balthazar', serif;
+    font-size: 22px;
+    margin: 0;
+}
+
+.priceContainer p{
+    font-family: 'Balthazar', serif;
+    font-size: 30px;
+    margin: 0 0 1rem 0;
+}
+
+.buttonContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+
+.buttonContainer a{
+    text-align: center;
+}
+

@@ -29,4 +29,17 @@ router.post("/", upload.single('image'), (req, res) => {
     })
 })
 
+router.get("/", (req, res)=> {
+  const checkUserCred = `SELECT * FROM users WHERE id = $1`
+  db.query(checkUserCred, [req.body.id]).then((results)=> {
+    if(req.body.admin = false){
+      res.json({msg: "invalidUser"})
+    }else{
+      res.json({msg: "adminUser"})
+    }
+  }).catch((error)=> {
+    if(error){throw error};
+  })
+})
+
 module.exports = router;

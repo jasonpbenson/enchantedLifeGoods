@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
+import '../../App.css';
 
 function Home(props){
+
     return(
         <div className="homeContainer">
-            <svg viewBox="0 0 700 225">
+            <svg id="viewBox" viewBox="0 0 700 225">
                 <path id="curve" d="M 175 125 c 4-6.1 65.5-96.8 178.6-95.6 c 111.3 1.2 170.8 90.3 175.1 97"/>
                 <text>
                     <textPath xlinkHref="#curve">

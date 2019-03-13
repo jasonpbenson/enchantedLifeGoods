@@ -1,5 +1,6 @@
+/* .Header.js=============================================================== */
 .header{
-    width: 90vw;
+    width: 80vw;
     height: 10vh;
     display: flex;
     align-content: center;
@@ -13,58 +14,53 @@
     outline: 1px solid #7d7aff;
 }
 
-.header:hover{
-    box-shadow: .5px .5px 4px 2px rgba(125,122,255,.5);
+@media screen and (min-width: 1024px){
+    .header{
+        width: 90vw;
+    }
+    .header:hover{
+        box-shadow: .5px .5px 4px 2px rgba(125,122,255,.5);
+    }
 }
+
+/* Logo.js================================================================= */
 
 .logoContainer{
     width: fit-content;
-    margin-left: 1rem;
 }
 
 .logoContainer img{
-    width: 18vw;
+    width: 30vw;
 }
 
-.logoContainer:hover{
-    background-image: url(../../srcAssets/enchanted_splatter_OffRegTrace_orangeGlow.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+@media screen and (min-width: 1024px){
+    .logoContainer img{
+        width: 16vw;
+    }
+    
+    .logoContainer:hover{
+        background-image: url(../../srcAssets/enchanted_splatter_OffRegTrace_orangeGlow.png);
+        background-size: 95%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
-.logo{
-    width: 60%;
-}
+/* Menu.js========================================================================================= */
 
 .menuContainer{
     display: flex;
     align-items: center;
-    flex-direction: column;
-    margin-right: 1rem;
+    flex-direction: row;
+    /* margin-right: 1rem; */
 }
 
 .menuIcon{
     width: 4vw;
 }
 
-.menuContainer ul{
-    width: 40vw;
-    display: flex;
-    flex-direction: row;
-    justify-items: flex-end;
-    align-items: center;
-    font-family: 'Balthazar', serif;
-    font-size: 24px;
-    margin: 0 auto;
-}
-
-.menuContainer li{
-    margin: 0 8px 0 8px;
-    border-radius: 5px;
-}
-
-.link:hover{
-    color: white;
+.menuItems{
+    display: none; 
 }
 
 .pageHeader{
@@ -79,4 +75,42 @@
     font-family: 'UnifrakturMaguntia', cursive;
     margin-bottom: 0;
     margin-left: 3vw;
+}
+
+@media screen and (min-width: 1024px){
+    .menuContainer ul{
+        width: 30vw;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-family: 'Balthazar', serif;
+        font-size: 24px;
+        margin: 0 auto;
+    }
+
+    .menuIcon{
+        display: none;
+    }
+
+    .link:hover{
+        color: white;
+    }
+
+}
+
+/* Menu.js END=================================================================== */
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+
+}
+
+@media screen and (min-width: 900px){
+
+}
+
+@media screen and (min-width: 1400px){
+
 }
