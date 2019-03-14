@@ -2,13 +2,20 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import confirmOrder from '../../../../actions/confirmOrderAction';
 import "../../../../App.css";
-import "./cart.css";
+import "./confirmOrder.css";
 
-function ConfirmOrder(props){
-    return(
-        <div></div>
-    )
+class ConfirmOrder extends Component{
+    constructor(){
+        super();
+    }
+
+    render(){
+        return(
+            <div></div>
+        )
+    }
 }
 
 export default ConfirmOrder;

@@ -51,7 +51,7 @@
 .menuContainer{
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     /* margin-right: 1rem; */
 }
 
@@ -91,10 +91,10 @@
         width: 30vw;
         display: flex;
         flex-direction: row;
-        justify-items: center;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
+        justify-items: flex-end;
+        justify-content: flex-end;
+        align-items: flex-end;
+        align-content: flex-end;
         font-family: 'Balthazar', serif;
         font-size: 24px;
         margin: 0 auto;
@@ -102,6 +102,18 @@
 
     .menuIcon{
         display: none;
+    }
+
+    .loginMenu{
+        width: 20vw;
+        font-family: 'Balthazar', serif;
+        font-size: 20px;
+        margin: 0 auto;
+        position: fixed;
+        top: 2%;
+        right: 2%;
+        padding: 2px;
+        background-color: #7d7aff;
     }
 
     .link:hover{

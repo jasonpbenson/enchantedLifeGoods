@@ -10,7 +10,6 @@ function CartItem(props){
             <td><img className="item" src={`${window.apiHost}/images/db_images/${good.image1}`} /></td>
             <td>
                 {good.title}
-                ${good.price}usd
             </td>
             <td><button className="removeButton">x</button></td>
             </tr>

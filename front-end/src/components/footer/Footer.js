@@ -9,10 +9,11 @@ class Footer extends Component{
         super();
     }
     render(){
+        console.log(this.props.cart);
         return(
             <div className="footerContainer">
                 <div className="userCart">
-                    <Link className="link" to="/cart"><h2>cart [{this.props.cart.totalItems}]</h2></Link>
+                    <Link className="link" to="/cart"><h2>cart</h2></Link>
                 </div>
                 <div className="accountInfo">
                     <Link className="link" to="/account"><h2>account</h2></Link>

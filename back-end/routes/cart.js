@@ -18,18 +18,20 @@ router.post('/getCart', (req, res)=> {
             // const getCartContent = `SELECT * FROM goods
             //     WHERE goods.id = cart.gid`
             db.query(getCartTotals, [uid]).then((results)=> {
-                const totals = `SELECT SUM(price) as totalPrice, 
-                    count(price) as totalItems
+                const totals = `SELECT SUM(price) AS totalPrice
                     FROM cart
                     INNER JOIN goods on goods.id = cart.gid
                     WHERE uid = $1`;
                 db.query(totals, [uid]).then((totalNumbers)=> {
+                    console.log("=======================")
+                    const total = totalNumbers[0].totalprice;
+                    console.log(totalNumbers[0].totalprice)
                     const responseData = {
                         contents: results,
-                        total: totalNumbers.totalPrice,
-                        items: totalNumbers.totalItems
+                        total,
                     }
                     res.json(responseData);
+                    // console.log(responseData);
                 })
             }).catch((err)=>{throw err})
         }
@@ -68,6 +70,8 @@ router.post('/updateCart', (req, res)=> {
     })
 })
 
+
+
 router.post("/updateAddress", (req, res)=> {
     const checkAddressQuery = `SELECT address1 FROM users WHERE token = $1`
     db.query(checkAddressQuery, [req.body.token]).then((results)=> {
@@ -86,6 +90,38 @@ router.post("/getAddress", (req, res)=> {
     console.log(req.body.token)
     db.query(getAddressQuery, [req.body.token]).then((results)=> {
         res.json(results)
+    })
+})
+
+router.post("/confirmOrder", (req, res)=> {
+    const token = req.body.token;
+    const getUser = `SELECT id FROM users WHERE token = $1`
+    db.query(getUser, [token]).then((results)=> {
+        if(results.length === 0){
+            res.json({
+                msg: "badToken"
+            })
+        }else{
+            const uid = results[0].id;
+            const getCartTotals = `SELECT * FROM cart
+                INNER JOIN goods on goods.id = cart.gid
+                WHERE uid = $1`;
+            db.query(getCartTotals, [uid]).then((results)=> {
+                const moveCartToSales = `INSERT INTO sales (id, uid, gid)
+                    VALUES
+                    (DEFAULT, $1, $2)`
+                db.query(moveCartToSales, [uid]).then(()=> {
+                    const removeFromCart = `DELETE * FROM cart WHERE uid = $1 `
+                    db.query(removeFromCart, [uid]).then((results)=> {
+                        res.json(results)
+                    }).catch((error)=>{
+                        if(error){throw error};
+                    }) 
+                })  
+            }).catch((error)=>{
+                if(error){throw error};
+            }) 
+        }
     })
 })
 

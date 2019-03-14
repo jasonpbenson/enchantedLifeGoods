@@ -47,8 +47,8 @@
 }
 
 .cartItemContainer{
-    height: 70%;
-    width: 30%;
+    height: 90%;
+    width: 45%;
     overflow: scroll;
     position: relative;
     outline: 1px solid #7d7aff;
@@ -56,19 +56,54 @@
     overflow: scroll
 }
 
+.cartItemContainer::-webkit-scrollbar{
+    width: .2em;
+    outline: none;
+    background: none;
+}
+
+.cartItemContainer::-webkit-scrollbar-thumb{
+    background-color: #7d7aff;
+    outline: none;
+    margin: .2em;
+}
+
+.cartItemContainer::-webkit-scrollbar-corner{
+    display: none;
+}
+
 .cartItemContainer img{
     width: 80%;
 }
 
-.checkoutContainer{
+.removeButton{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e67639;
+    color: white;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.removeButton:hover{
+    background-color: #f4080b; 
+}
+
+.cartTable td{
+    padding: .5rem;
+    text-align: center;
+}
+
+.cartTotal{
     position: fixed;
-    z-index: 10;
-    width: 100%;
 }
 
 .checkoutButton{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     background-color: #7d7aff;
     color: white;
@@ -76,6 +111,9 @@
     font-family: 'Balthazar', serif;
     font-size: 20px;
     outline: none;
+    position: fixed;
+    top: 75%;
+    right: 6%
 }
 
 .checkoutButton:hover{  
@@ -103,18 +141,3 @@
     width: 60%;
 }
 
-/* 'confirm order'========================================================================================== */
-
-.confirmOrderWrapper{
-    height: 65vh;
-    width: 90%;
-    display: flex;
-    align-content: space-around;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 2rem auto 0 auto;
-    font-family: 'Balthazar', serif;
-}

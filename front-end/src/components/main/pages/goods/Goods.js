@@ -14,10 +14,10 @@ class Goods extends Component{
         return(
             <div className="goodsContainer">
                 <div className="thumbMenu">
-                    <div className="thumbMenuHeader">
+                    {/* <div className="thumbMenuHeader">
                         <button className="menuButton">ceramics</button>
                         <button className="menuButton">wearables</button>
-                    </div>
+                    </div> */}
                     <ProductOverview />
                 </div>
             </div>

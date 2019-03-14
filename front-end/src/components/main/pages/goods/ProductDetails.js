@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import SweetAlert from 'sweetalert-react';
+import 'sweetalert/dist/sweetalert.css';
 import updateCart from '../../../../actions/updateCart';
 import "../../../../App.css";
 import './goods.css';
@@ -11,7 +13,8 @@ class ProductDetails extends Component{
     constructor(props){
         super(props)
         this.state = {
-            good: {}
+            good: {},
+            showAlert: false
         }
     }
 
@@ -30,15 +33,26 @@ class ProductDetails extends Component{
     }
 
     componentWillReceiveProps(newProps){
+        console.log("Getting new props!")
         if(newProps.cart.length != this.props.cart.length){
-            this.props.history.push('/?added=item')
         }
         console.log(newProps)
     }
 
     addToCart = (event)=> {
-        const token = this.props.auth.token
-        this.props.updateCart(token, this.state.good.id)
+        if(this.props.auth.token === undefined){
+            this.props.history.push('/login')
+        }else{
+            const token = this.props.auth.token
+            this.props.updateCart(token, this.state.good.id)
+            this.setState({
+                showAlert: true
+            })
+        }
+    }
+
+    componentWillUnmount(){
+        console.log("bye bye")
     }
 
     render(){
@@ -47,6 +61,17 @@ class ProductDetails extends Component{
         let price = this.state.good.price
         return(
             <div className="productContainer">
+                <SweetAlert 
+                    show={this.state.showAlert}
+                    title="added to cart :)"
+                    text={this.state.msg}
+                    onConfirm={() =>{
+                        console.log("closing");
+                         this.setState({ showAlert: false })
+                         this.props.history.push('/goods/?added=item')
+                        }
+                    }
+                />
                 <div className="imageContainer">
                     <img src={`${window.apiHost}/images/db_images/${this.state.good.image1}`} />
                 </div>

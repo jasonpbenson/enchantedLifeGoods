@@ -15,6 +15,7 @@ import Account from './components/main/pages/account/Account';
 import Cart from './components/main/pages/cart/Cart';
 import UpdateAddress from './components/main/pages/cart/UpdateAddress';
 import ConfirmOrder from './components/main/pages/cart/ConfirmOrder';
+import ThankYou from './components/main/pages/cart/ThankYou';
 import Admin from './components/main/pages/admin/Admin';
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/updateAddress" component={UpdateAddress} />
             <Route exact path="/confirmOrder" component={ConfirmOrder} />
+            <Route exact path="/thankYou" component={ThankYou} />
             <Route exact path="/admin" component={Admin} />
           </div>
           <Footer />

@@ -3,27 +3,34 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import getCart from '../../../../actions/getCart';
+import confirmOrder from '../../../../actions/confirmOrderAction';
 import CartItem from './CartItem';
 import './cart.css';
 import "../../../../App.css";
 import UpdateAddress from './UpdateAddress';
 
+
 class Cart extends Component{
     constructor(props){
         super(props);
+
+    }
+
+    componentWillReceiveProps(newProps){
+
     }
 
     componentDidMount(){
         if(this.props.auth.token === undefined){
             this.props.history.push('/login')
         }else{
-            // console.log(this.props.getCart)
+            console.log(this.props.getCart(this.props.auth.token))
             this.props.getCart(this.props.auth.token);
         }
     }
 
     render(){
-        console.log(this.props.cart.total);
+        console.log(this.props);
         if(!this.props.cart.contents){
             return(
                 <div className="emptyCart">
@@ -44,9 +51,11 @@ class Cart extends Component{
                     <div className="cartItemContainer">
                         {cartArray}
                     </div>
-                    <h3>cart total: ${this.props.cart.totalPrice}</h3>
                     <div>
-                        <button className="checkoutButton"><Link to="/ConfirmOrder">checkout</Link></button>
+                        <h3 className="cartTotal">$ {this.props.cart.total}</h3>
+                    </div>
+                    <div>
+                        <Link to="/ConfirmOrder"><button className="checkoutButton">checkout</button></Link>
                     </div>
                 </div>
             )
@@ -63,7 +72,8 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return bindActionCreators({
-        getCart: getCart
+        getCart: getCart,
+        confirmOrder: confirmOrder
     }, dispatch)
 }
 

@@ -22,7 +22,7 @@ class FileUpload extends Component{
         const title = event.target[0].value;
         const description = event.target[1].value;
         const price = event.target[2].value;
-        const image = event.target[3].files[0];
+        const image = event.target[3].files;
   
         this.props.additemAction({
             title,
@@ -50,7 +50,7 @@ class FileUpload extends Component{
                     </div>
                     <div className="formItem">
                         <label htmlFor='image'>image:</label>
-                        <input type="file" name="image" />
+                        <input type="file" multiple name="image" />
                     </div>
                     <button className="submitButton">upload</button>
                 </form>

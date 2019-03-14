@@ -6,7 +6,10 @@ export default (formData)=> {
     newFormData.append("title", formData.title)
     newFormData.append("description", formData.description)
     newFormData.append("price", formData.price)
-    newFormData.append("image", formData.image)
+
+    for(let file of formData.image){
+        newFormData.append(`files`, file)
+    }
     const axiosPromise = axios({
         url: `${window.apiHost}/admin`,
         method: 'POST',
