@@ -52,10 +52,10 @@ class Cart extends Component{
                         {cartArray}
                     </div>
                     <div>
-                        <h3 className="cartTotal">$ {this.props.cart.total}</h3>
+                        <h3 className="cartTotal">cart total $ {this.props.cart.total}</h3>
                     </div>
                     <div>
-                        <Link to="/ConfirmOrder"><button className="checkoutButton">checkout</button></Link>
+                        <Link to="/thankYou"><button className="checkoutButton">checkout</button></Link>
                     </div>
                 </div>
             )

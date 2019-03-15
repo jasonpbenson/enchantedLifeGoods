@@ -76,6 +76,10 @@
     width: 80%;
 }
 
+.cartItem{
+    font-family: 'Balthazar', serif;
+}
+
 .removeButton{
     width: 30px;
     height: 30px;
@@ -83,7 +87,7 @@
     background-color: #e67639;
     color: white;
     text-align: center;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Balthazar', serif;
     font-size: 20px;
     cursor: pointer;
 }
@@ -99,6 +103,10 @@
 
 .cartTotal{
     position: fixed;
+    font-family: 'Balthazar', serif;
+    font-size: 20px;
+    top: 84%;
+    right: 14%
 }
 
 .checkoutButton{

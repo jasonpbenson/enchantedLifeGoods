@@ -103,9 +103,7 @@ router.post("/confirmOrder", (req, res)=> {
             })
         }else{
             const uid = results[0].id;
-            const getCartTotals = `SELECT * FROM cart
-                INNER JOIN goods on goods.id = cart.gid
-                WHERE uid = $1`;
+            const getCartTotals = `SELECT * FROM cart WHERE uid = $1`;
             db.query(getCartTotals, [uid]).then((results)=> {
                 const moveCartToSales = `INSERT INTO sales (id, uid, gid)
                     VALUES

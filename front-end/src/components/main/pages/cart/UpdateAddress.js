@@ -64,14 +64,39 @@ class UpdateAddress extends Component{
         })
     }
 
+
+
     changeAddress = (e)=>{
         console.log(e.target.value);
         this.setState({
             address1: e.target.value,
-            address2: e.target.value,
-            city: e.target.value,
-            state: e.target.value,
-            zip: e.target.value
+        })
+    }
+    changeAddress2 = (e)=>{
+        console.log(e.target.value);
+        this.setState({
+            address2: e.target.value
+        })
+    }
+
+    changeAddressCity = (e)=>{
+        console.log(e.target.value);
+        this.setState({
+            address2: e.target.value
+        })
+    }
+
+    changeAddressState = (e)=>{
+        console.log(e.target.value);
+        this.setState({
+            address2: e.target.value
+        })
+    }
+
+    changeAddressZip = (e)=>{
+        console.log(e.target.value);
+        this.setState({
+            address2: e.target.value
         })
     }
 
@@ -94,19 +119,19 @@ class UpdateAddress extends Component{
                         </div>
                         <div>
                             <label htmlFor='address2'>apt/suite/unit:</label>  
-                            <input onChange={this.changAddress} value={this.state.address2} type='address2' name='address2' id='address2' />          
+                            <input onChange={this.changAddress2} value={this.state.address2} type='address2' name='address2' id='address2' />          
                         </div>
                         <div>
                             <label htmlFor='city'>city:</label>
-                            <input onChange={this.changAddress} value={this.state.city} type='city' name='city' id='city' required />
+                            <input onChange={this.changAddressCity} value={this.state.city} type='city' name='city' id='city' required />
                         </div>
                         <div>
                             <label htmlFor='state'>state:</label>
-                            <input onChange={this.changAddress} value={this.state.state}  type='state' name='state' id='state' required />
+                            <input onChange={this.changAddressState} value={this.state.state}  type='state' name='state' id='state' required />
                         </div>
                         <div>
                             <label htmlFor='zip'>zip:</label>
-                            <input onChange={this.changAddress} value={this.state.zip}  type='zip' name='zip' id='zip' required />
+                            <input onChange={this.changAddressZip} value={this.state.zip}  type='zip' name='zip' id='zip' required />
                         </div>
 
                         <br />

@@ -51,8 +51,6 @@
 .menuContainer{
     display: flex;
     align-items: center;
-    flex-direction: column;
-    /* margin-right: 1rem; */
 }
 
 .menuIcon{
@@ -88,16 +86,21 @@
 
 @media screen and (min-width: 1024px){
     .menuItems{
-        width: 30vw;
+        width: 17vw;
         display: flex;
-        flex-direction: row;
-        justify-items: flex-end;
-        justify-content: flex-end;
-        align-items: flex-end;
-        align-content: flex-end;
+        justify-content: space-evenly;
+        /* align-items: flex-end; */
+        /* align-content: flex-end; */
         font-family: 'Balthazar', serif;
-        font-size: 24px;
-        margin: 0 auto;
+        font-size: 26px;
+        /* margin: 0 auto; */
+        /* outline: 2px solid red; */
+    }
+    .menuItems a {
+        display: flex;
+        justify-content: center;
+        width: 8vw;
+        /* outline: 2px solid black; */
     }
 
     .menuIcon{
@@ -105,15 +108,18 @@
     }
 
     .loginMenu{
-        width: 20vw;
+        width: fit-content;
+        height: fit-content;
         font-family: 'Balthazar', serif;
-        font-size: 20px;
+        font-size: 16px;
         margin: 0 auto;
-        position: fixed;
-        top: 2%;
-        right: 2%;
-        padding: 2px;
+        padding: .5rem;
         background-color: #7d7aff;
+        display: flex;
+    }
+
+    .logRegNav a:hover{
+        color: white;
     }
 
     .link:hover{

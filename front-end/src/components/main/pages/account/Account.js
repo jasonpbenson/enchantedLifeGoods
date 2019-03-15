@@ -24,32 +24,32 @@ class Account extends Component{
     }
 
     render(){
-        console.log(this.props);
-        if(this.props.getSales.contents.length === 0){
-            return(
-                <div className="noSales">
-                    <h3>no orders yet ...</h3>
-                    <img className="noSalesIcon" src="/assets/graphics/icon4.png"/>
-                    <h3><Link to="/goods">view goods</Link></h3>
-                </div>
-            )
-        }else{
-            var salesArray = this.props.sales.contents.map((sale, index)=> {
-                return(
-                    <salesItem key={index} sale={sale} />                
-                )
-            })
+        // console.log(this.props);
+        // if(this.props.getSales.contents.length === 0){
+        //     return(
+        //         <div className="noSales">
+        //             <h3>no orders yet ...</h3>
+        //             <img className="noSalesIcon" src="/assets/graphics/icon4.png"/>
+        //             <h3><Link to="/goods">view goods</Link></h3>
+        //         </div>
+        //     )
+        // }else{
+        //     var salesArray = this.props.sales.contents.map((sale, index)=> {
+        //         return(
+        //             <salesItem key={index} sale={sale} />                
+        //         )
+        //     })
         return(
             <div className="accountContainer">
-                {salesArray}
+                {/* {salesArray} */}
                 <div className="userInfo">
-                    <div className="userName">{this.state.auth.name}</div>
+                    {/* <div className="userName">{this.state.auth.name}</div> */}
                     <div className="shippingAddress">
-                        {this.state.auth.address1}
+                        {/* {this.state.auth.address1}
                         {this.state.auth.address2}
                         {this.state.auth.city}
                         {this.state.auth.state}
-                        {this.state.auth.zip}
+                        {this.state.auth.zip} */}
                         </div>
                     <div>
                         <button className="editButton" type='submit'>edit</button>
@@ -58,7 +58,6 @@ class Account extends Component{
             </div>
         )
         }   
-    }
 }
 
 function mapStateToProps(state){

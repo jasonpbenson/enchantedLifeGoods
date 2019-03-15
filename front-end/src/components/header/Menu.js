@@ -22,20 +22,19 @@ class Menu extends Component {
         return (
             <div className="wrapper">
                 <div className="menuContainer">
-                    <ul className="menuItems">
-                        <Link className="link" to="/goods"><li>goods</li></Link>
-                        <Link className="link" to="/info"><li>info</li></Link>
-                    </ul>
-
+                    <div className="menuItems">
+                        <Link className="link" to="/goods">goods</Link>
+                        <Link className="link" to="/info">info</Link>
+                    </div>
+                    <div className="loginMenu">
+                        {logRegNav}
+                    </div>
                     <div className="menuIcon"><button><img className="menuIcon" src="/assets/graphics/icon3.png" /></button></div>
                     <div className="mobileMenuContainer">
                         <ul className="mobileMenuItems">
                             <MobileMenu />
                         </ul>
                     </div>
-                </div>
-                <div className="loginMenu">
-                    {logRegNav}
                 </div>
             </div>
         )

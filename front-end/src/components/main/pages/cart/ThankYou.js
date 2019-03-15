@@ -14,15 +14,18 @@ class ThankYou extends Component{
     render(){
         return(
             <div className="confirmOrderWrapper">
-                <ConfirmOrder />
-                <h1>thank you!</h1>
-                <h3>you should receive a confirmation email shortly, 
-                    if you have any questions please contact us 
-                    at info@enchanted-life-goods.earthlove, 
-                    jason + erin</h3>    
+                {/* <ConfirmOrder /> */}
+                <div className="thankYouMessage">
+                    <h1>thank you!</h1>
+                    <img className="thankYouIcon" src="/assets/graphics/icon1.png" />
+                    <h3>you should receive a confirmation email shortly,</h3>  
+                    <h3>if you have any questions please contact us</h3>
+                    <h3>at info@enchanted-life-goods.us,</h3>
+                    <h3>jason + erin</h3>
+                </div>
             </div>
         )
     }
 }
 
-export default ConfirmOrder;
+export default ThankYou;

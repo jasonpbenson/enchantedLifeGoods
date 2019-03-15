@@ -12,14 +12,11 @@
     font-family: 'Balthazar', serif;
 }
 
-.svgContainer{
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 30%
-}
-
 text{
     font-size: 12.9px;
     font-family: 'Eczar', serif;
+}
+
+.thankYouIcon{
+    width: 25%;
 }

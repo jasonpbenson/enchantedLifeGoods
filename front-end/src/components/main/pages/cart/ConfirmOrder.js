@@ -11,6 +11,10 @@ class ConfirmOrder extends Component{
         super();
     }
 
+    componentWillMount(){
+        
+    }
+
     render(){
         return(
             <div></div>
