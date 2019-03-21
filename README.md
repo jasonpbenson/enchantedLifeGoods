@@ -22,7 +22,3 @@ Enchanted Life Goods is an ecommerce site for a small business that I manage wit
 ![good details page image](_screenshots/elg_screenshot4.png)
 ![cart page image](_screenshots/elg_screenshot5.png)
 ![checkout page image](_screenshots/elg_screenshot6.png)
-
-
-
-  
