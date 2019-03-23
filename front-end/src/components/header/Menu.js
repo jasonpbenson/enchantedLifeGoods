@@ -2,11 +2,31 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import MobileMenu from './MobileMenu';
+import MobileMenuButton from './MobileMenuButton';
 
 class Menu extends Component {
-    constructor(){
-        super();
+    constructor(props, context){
+        super(props, context);
+        this.state = {
+            visible: false
+        };
+
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
     }
+
+    handleMouseDown(event) {
+        this.toggleMenu();
+        console.log("clicked");
+        event.stopPropagation();
+    }
+
+    toggleMenu() {
+        this.setState({
+            visible: !this.state.visible
+        });
+    }
+
 
     render(){
         console.log(this.props)
@@ -29,11 +49,10 @@ class Menu extends Component {
                     <div className="loginMenu">
                         {logRegNav}
                     </div>
-                    <div className="menuIcon"><button><img className="menuIcon" src="/assets/graphics/icon3.png" /></button></div>
+                        <MobileMenuButton handleMouseDown={this.handleMouseDown}/>
                     <div className="mobileMenuContainer">
-                        <ul className="mobileMenuItems">
-                            <MobileMenu />
-                        </ul>
+                        <MobileMenu handleMouseDown={this.handleMouseDown} 
+                            menuVisibility={this.state.visible}/>
                     </div>
                 </div>
             </div>

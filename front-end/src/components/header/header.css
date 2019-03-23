@@ -14,7 +14,11 @@
     outline: 1px solid #7d7aff;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 600px) and (max-width: 899px){
+
+}
+
+@media screen and (min-width: 900px){
     .header{
         width: 90vw;
     }
@@ -33,7 +37,11 @@
     width: 30vw;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 600px) and (max-width: 899px){
+
+}
+
+@media screen and (min-width: 900px){
     .logoContainer img{
         width: 16vw;
     }
@@ -53,13 +61,59 @@
     align-items: center;
 }
 
-.menuIcon{
-    width: 14vw;
-    margin-right: 1rem;
+.mobileMenuButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background: #e7c444;
+    border: #7d7aff 10px solid;
+    outline: none;
+}
+
+.mobileMenuButton:active{
+    filter: invert(1);
 }
 
 .menuItems{
     display: none; 
+}
+
+.loginMenu{
+    display: none;
+}
+
+#slidingMenu{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#e7c444 25%, 50%,#c4d2d7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+    overflow: scroll;
+    z-index: 1000;
+    text-align: right;
+}
+
+.hide{
+    transform: translate3d(0, -200vw, 0);
+    opacity: 0;
+}
+
+.show{
+    transform: translate3d(0vw, 0, 0);
+    overflow: hidden;
+    opacity: .9;
+}
+
+.mobileMenuItems{
+    width: 90%;
+    padding: 0;
+    margin-top: 70px;
+    font-family: 'Balthazar', serif;
+    color: #7d7aff;
+    font-size: 38px;
 }
 
 .mobileMenuContainer{
@@ -70,40 +124,25 @@
     position: absolute;
 }
 
-.pageHeader{
-    width: 90vw;
-    text-align: left;
-    margin: 0 auto;
-    margin-top: 1rem;
-    margin-bottom: 0;
+@media screen and (min-width: 600px) and (max-width: 899px){
+
 }
 
-.pageHeader h1{
-    font-family: 'UnifrakturMaguntia', cursive;
-    margin-bottom: 0;
-    margin-left: 3vw;
-}
-
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 900px){
     .menuItems{
         width: 17vw;
         display: flex;
         justify-content: space-evenly;
-        /* align-items: flex-end; */
-        /* align-content: flex-end; */
         font-family: 'Balthazar', serif;
         font-size: 26px;
-        /* margin: 0 auto; */
-        /* outline: 2px solid red; */
     }
     .menuItems a {
         display: flex;
         justify-content: center;
         width: 8vw;
-        /* outline: 2px solid black; */
     }
 
-    .menuIcon{
+    .mobileMenuButton{
         display: none;
     }
 
@@ -129,15 +168,3 @@
 }
 
 /* Menu.js END=================================================================== */
-
-@media screen and (min-width: 600px) and (max-width: 899px) {
-
-}
-
-@media screen and (min-width: 900px){
-
-}
-
-@media screen and (min-width: 1400px){
-
-}

@@ -1,44 +1,29 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import './header.css';
 
-class mobileMenu extends Component {
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            visible: false
-        };
-
-        this.handleMouseDown = this.handleMouseDown.bind(this);
-        this.toggleMenu = this.toggleMenu.bind(this);
-    }
-    
-    handleMouseDown(event) {
-        this.toggleMenu();
-
-        event.stop();
-    }
-
-    toggleMenu() {
-        this.setState({
-            visible: !this.state.visible
-        });
-    }
-
+class MobileMenu extends Component {
+    constructor(props) {
+        super(props);
+    }    
     render() {
+        var visibility = "hide";
+        if (this.props.menuVisibility) {
+            visibility ="show";
+        }
         return (
-            <div>
-                <div>
-                    <p>Can you spot the item that doesn't belong?</p>
-                    <ul>
-                        <Link className="link" to="/goods"><li>goods</li></Link>
-                        <Link className="link" to="/info"><li>info</li></Link>
-                        <Link className="link" to="/login"><li>login</li></Link>
-                        <Link className="link" to="/register"><li>register</li></Link>
-                    </ul>
-                </div>
+            <div id="slidingMenu" 
+                onMouseDown={this.props.handleMouseDown}
+                className={visibility}>
+                <ul className="mobileMenuItems">
+                    <Link className="mobileMenuLink" to="/goods"><li>goods</li></Link>
+                    <Link className="mobileMenuLink" to="/info"><li>info</li></Link>
+                    <Link className="mobileMenuLink" to="/login"><li>login</li></Link>
+                    <Link className="mobileMenuLink" to="/register"><li>register</li></Link>
+                </ul>
             </div>
-        );
+        )
     }
 }
 
-export default mobileMenu;
+export default MobileMenu;
