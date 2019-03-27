@@ -2,6 +2,7 @@
     width: 90vw;
     height: 10vh;
     display: flex;
+    align-items: center;
     justify-items: center;
     justify-content: space-between;
     margin: 0 auto;
@@ -11,8 +12,30 @@
 .footerContainer h2{
     font-family: 'Balthazar', serif;
     font-size: 30px;
+    margin: 0;
 }
 
-.footerContainer h2:hover{
-    color: #ffffff;
+.userCart{
+    height: fit-content;
+}
+
+.accountInfo{
+    height: fit-content;
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px){
+    .footerContainer{
+        height: 8vh;
+        width: 80vw;
+    }
+
+    .footerContainer h2{
+        font-size: 55px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .footerContainer h2:hover{
+        color: #ffffff;
+    }
 }

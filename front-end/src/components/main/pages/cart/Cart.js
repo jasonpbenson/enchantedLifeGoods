@@ -16,10 +16,6 @@ class Cart extends Component{
 
     }
 
-    componentWillReceiveProps(newProps){
-
-    }
-
     componentDidMount(){
         if(this.props.auth.token === undefined){
             this.props.history.push('/login')

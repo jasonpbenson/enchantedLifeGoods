@@ -34,7 +34,7 @@
 }
 
 .logoContainer img{
-    width: 30vw;
+    width: 40vw;
 }
 
 @media screen and (min-width: 600px) and (max-width: 899px){
@@ -62,17 +62,18 @@
 }
 
 .mobileMenuButton{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin-right: 20px;
-    background: #e7c444;
-    border: #7d7aff 10px solid;
+    background-image: linear-gradient(#7d7aff 5%, 60%, #5fb4ba);
+    border: #5fb4ba 10px solid;
     outline: none;
 }
 
 .mobileMenuButton:active{
-    filter: invert(1);
+    background-image: linear-gradient(#5fb4ba 25%, 50%, #7d7aff);
+    border: #e7c444 10px solid;
 }
 
 .menuItems{
@@ -90,7 +91,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    transition: all 1s;
+    transition: transform, opacity 1s;
+    transition-delay: .3s;
     overflow: scroll;
     z-index: 1000;
     text-align: right;
@@ -109,23 +111,39 @@
 
 .mobileMenuItems{
     width: 90%;
-    padding: 0;
-    margin-top: 70px;
+    margin-top: 40px;
+}
+
+.mobileMenuItems li{
+    margin: 16px;
+}
+
+.mobileMenuLink{
+    width: fit-content;
+    height: fit-content;
     font-family: 'Balthazar', serif;
     color: #7d7aff;
     font-size: 38px;
 }
 
-.mobileMenuContainer{
-    position: relative;
-}
-
-.mobileMenuItems{
-    position: absolute;
-}
-
 @media screen and (min-width: 600px) and (max-width: 899px){
+    .logoContainer img{
+        width: 30vw;
+    }
+    
+    .mobileMenuButton{
+        width: 100px;
+        height: 100px;
+        border: #5fb4ba 15px solid;
+    }
 
+    .mobileMenuButton:active{
+        border: #e7c444 15px solid;
+    }
+
+    .mobileMenuItems{
+        font-size: 60px;
+    }
 }
 
 @media screen and (min-width: 900px){

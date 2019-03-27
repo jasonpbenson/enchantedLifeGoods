@@ -8,6 +8,11 @@ font-family: 'UnifrakturMaguntia', cursive;
 font-family: 'Eczar', serif; */
 
 /* app-wide shared styles */
+.App{
+  height: 100vh;
+  width: 100vw;
+}
+
 body{
   background-image: linear-gradient(#c4d2d7 25%, 50%, #e7c444);
   background-size: auto 100vh;

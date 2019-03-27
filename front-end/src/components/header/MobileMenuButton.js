@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './header.css';
+import '../../App.css';
 
 class MobileMenuButton extends Component{
     constructor(){

@@ -50,9 +50,9 @@ router.post('/login',(req, res)=>{
           if (error){throw error};
         });
         res.json({
-          msg: "loginSuccess",
+          msg: "userLoginSuccess",
           token,
-          email
+          email,
         })
       }else{
         res.json({

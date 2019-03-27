@@ -9,14 +9,11 @@ class Admin extends Component{
         super();
     }
 
-    state = {
-        redirect: false
-    }
-
-    setRedirect = ()=> {
-        this.setState({
-            redirect: true
-        })
+    componentDidMount(){
+        if(this.props.auth.token === undefined || this.props.auth.admin === false){
+            this.props.history.push('/')
+        }
+        console.log(this.props.auth)
     }
 
     render(){

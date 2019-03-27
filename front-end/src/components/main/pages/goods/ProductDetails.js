@@ -75,18 +75,18 @@ class ProductDetails extends Component{
                 <div className="imageContainer">
                     <img src={`${window.apiHost}/images/db_images/${this.state.good.image1}`} />
                 </div>
-                <div className="infoContainer">
+                <div className="productInfoContainer">
                     <h2 className="productTitle">"{title}"</h2>
-                    <div className="descriptionContainer">
+                    <div className="productDescriptionContainer">
                         <p>{description}</p>
                     </div>
                     <div className="priceContainer">
                         <p>${price} usd</p>
                     </div>
-                    <div className="buttonContainer">
-                        <button onClick={this.addToCart} className="menuButton addToCartButton">add</button>
-                        <button className="menuButton"><Link to="/goods">goods</Link></button>
-                    </div>
+                </div>
+                <div className="buttonContainer">
+                    <button onClick={this.addToCart} className="menuButton addToCartButton">add</button>
+                    <button className="menuButton"><Link to="/goods">goods</Link></button>
                 </div>
             </div>
         )

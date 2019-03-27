@@ -31,6 +31,8 @@ class Login extends Component{
             })
         }else if(newProps.auth.msg === 'loginSuccess'){
             this.props.history.push('/goods');
+        }else if(newProps.auth.msg === 'loginSuccess' && this.props.auth.admin === true){
+            this.props.history.push('/admin');
         }
     }
 

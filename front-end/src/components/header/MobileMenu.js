@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import './header.css';
+import '../../App.css';
 
 class MobileMenu extends Component {
     constructor(props) {
@@ -16,10 +17,10 @@ class MobileMenu extends Component {
                 onMouseDown={this.props.handleMouseDown}
                 className={visibility}>
                 <ul className="mobileMenuItems">
-                    <Link className="mobileMenuLink" to="/goods"><li>goods</li></Link>
-                    <Link className="mobileMenuLink" to="/info"><li>info</li></Link>
-                    <Link className="mobileMenuLink" to="/login"><li>login</li></Link>
-                    <Link className="mobileMenuLink" to="/register"><li>register</li></Link>
+                    <li><Link className="mobileMenuLink" to="/goods">goods</Link></li>
+                    <li><Link className="mobileMenuLink" to="/info">info</Link></li>
+                    <li><Link className="mobileMenuLink" to="/login">login</Link></li>
+                    <li><Link className="mobileMenuLink" to="/register">register</Link></li>
                 </ul>
             </div>
         )
